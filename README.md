@@ -16,7 +16,7 @@ $ open https://git-scm.com
 ## Tutorial
 
 ```ShellSession
-$ export GITHUB_USERNAME=<имя_пользователя>  # добавляем еременную в среду окружения
+$ export GITHUB_USERNAME=<имя_пользователя>  # добавляем переменную в среду окружения
 $ export GITHUB_EMAIL=<адрес_почтового_ящика>  # добавляем переменную в среду окружения
 $ alias edit=<nano|vi|vim|subl>   # переопределяем команду и подставляем в них параметры
 ```
@@ -54,7 +54,7 @@ $ git log     # история фиксаций
 $ mkdir sources   #создаем новый каталог
 $ mkdir include   #создаем новый каталог
 $ mkdir examples  #создаем новый каталог
-$ cat > sources/print.cpp <<EOF   # выводит последовательно указанные файлы
+$ cat > sources/print.cpp <<EOF  
 #include <print.hpp>
 
 void print(const std::string& text, std::ostream& out) {
@@ -79,7 +79,7 @@ EOF
 ```
 
 ```ShellSession
-$ cat > examples/example1.cpp <<EOF    # выводит последовательно указанные файлы
+$ cat > examples/example1.cpp <<EOF    
 #include <print.hpp>
 
 int main(int argc, char** argv) {
@@ -89,7 +89,7 @@ EOF
 ```
 
 ```ShellSession
-$ cat > examples/example2.cpp <<EOF    # выводит последовательно указанные файлы
+$ cat > examples/example2.cpp <<EOF   
 #include <fstream>
 #include <print.hpp>
 
