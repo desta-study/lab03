@@ -16,7 +16,7 @@ $ open https://git-scm.com
 ## Tutorial
 
 ```ShellSession
-$ export GITHUB_USERNAME=<имя_пользователя>  # добавляем еременную в среду окружения
+$ export GITHUB_USERNAME=<имя_пользователя>  # добавляем переменную в среду окружения
 $ export GITHUB_EMAIL=<адрес_почтового_ящика>  # добавляем переменную в среду окружения
 $ alias edit=<nano|vi|vim|subl>   # переопределяем команду и подставляем в них параметры
 ```
