@@ -8,24 +8,24 @@ $ open https://git-scm.com
 
 ## Tasks
 
-- [ ] 1. Создать публичный репозиторий с названием **lab03** и с лиценцией **MIT**
-- [ ] 2. Ознакомиться со ссылками учебного материала
-- [ ] 3. Выполнить инструкцию учебного материала
-- [ ] 4. Составить отчет и отправить ссылку личным сообщением в **Slack**
+- [x] 1. Создать публичный репозиторий с названием **lab03** и с лиценцией **MIT**
+- [x] 2. Ознакомиться со ссылками учебного материала
+- [x]  3. Выполнить инструкцию учебного материала
+- [x] 4. Составить отчет и отправить ссылку личным сообщением в **Slack**
 
 ## Tutorial
 
 ```ShellSession
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GITHUB_EMAIL=<адрес_почтового_ящика>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=<имя_пользователя>  # добавляем еременную в среду окружения
+$ export GITHUB_EMAIL=<адрес_почтового_ящика>  # добавляем переменную в среду окружения
+$ alias edit=<nano|vi|vim|subl>   # переопределяем команду и подставляем в них параметры
 ```
 
 ```ShellSession
-$ mkdir lab03 && cd lab03
-$ git init
-$ git config --global user.name ${GITHUB_USERNAME}
-$ git config --global user.email ${GITHUB_EMAIL}
+$ mkdir lab03 && cd lab03        #создаем новый каталог
+$ git init       # запускаем все остальные процессы
+$ git config --global user.name ${GITHUB_USERNAME}    # информация об имени и эл. ящике записана в ~/.gitconfig, и будет                #  применяться автоматически для всех репозиториев текущего пользователя системы.
+$ git config --global user.email ${GITHUB_EMAIL}      # информация об имени и эл. ящике записана в ~/.gitconfig, и будет    #  применяться автоматически для всех репозиториев текущего пользователя системы.
 $ git config -e --global
 $ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03
 $ git pull origin master
