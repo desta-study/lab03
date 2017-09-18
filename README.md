@@ -10,30 +10,30 @@ $ open https://git-scm.com
 
 - [x] 1. Создать публичный репозиторий с названием **lab03** и с лиценцией **MIT**
 - [x] 2. Ознакомиться со ссылками учебного материала
-- [x] 3. Выполнить инструкцию учебного материала
+- [x]  3. Выполнить инструкцию учебного материала
 - [x] 4. Составить отчет и отправить ссылку личным сообщением в **Slack**
 
 ## Tutorial
 
 ```ShellSession
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GITHUB_EMAIL=<адрес_почтового_ящика>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=<имя_пользователя>  # добавляем еременную в среду окружения
+$ export GITHUB_EMAIL=<адрес_почтового_ящика>  # добавляем переменную в среду окружения
+$ alias edit=<nano|vi|vim|subl>   # переопределяем команду и подставляем в них параметры
 ```
 
 ```ShellSession
-$ mkdir lab03 && cd lab03
-$ git init
-$ git config --global user.name ${GITHUB_USERNAME}
-$ git config --global user.email ${GITHUB_EMAIL}
-$ git config -e --global
-$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03
-$ git pull origin master
-$ touch README.md
-$ git status
-$ git add README.md
-$ git commit -m"added README.md"
-$ git push origin master
+$ mkdir lab03 && cd lab03        #создаем новый каталог
+$ git init       # запускаем все остальные процессы
+$ git config --global user.name ${GITHUB_USERNAME}    # информация об имени и эл. ящике записана в ~/.gitconfig, и будет        применяться автоматически для всех репозиториев текущего пользователя системы.
+$ git config --global user.email ${GITHUB_EMAIL}      # информация об имени и эл. ящике записана в ~/.gitconfig, и будет применяться автоматически для всех репозиториев текущего пользователя системы.
+$ git config -e --global    # весь список настроек, применяемых для пользовательского репозитория
+$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03   # добавить новый удаленный доступ
+$ git pull origin master   #  замерджить все ветки с удаленного репозитория
+$ touch README.md       # установка времени последнего изменения файла или доступа в текущее время
+$ git status    # показывает статус рабочего дерева
+$ git add README.md   #   отслеживает файла README.md
+$ git commit -m"added README.md"  # фиксирует изменения, добавленные в staging area
+$ git push origin master    #  вталкивает данные текущей ветви в ветвь master удалённого репозитория origin
 ```
 
 Добавить на сервисе **GitHub** в репозитории **lab03** файл **.gitignore**
@@ -46,15 +46,15 @@ $ git push origin master
 ```
 
 ```ShellSession
-$ git pull origin master
-$ git log
+$ git pull origin master     #  замерджить все ветки с удаленного репозитория
+$ git log     # история фиксаций
 ```
 
 ```ShellSession
-$ mkdir sources
-$ mkdir include
-$ mkdir examples
-$ cat > sources/print.cpp <<EOF
+$ mkdir sources   #создаем новый каталог
+$ mkdir include   #создаем новый каталог
+$ mkdir examples  #создаем новый каталог
+$ cat > sources/print.cpp <<EOF   # выводит последовательно указанные файлы
 #include <print.hpp>
 
 void print(const std::string& text, std::ostream& out) {
@@ -68,7 +68,7 @@ EOF
 ```
 
 ```ShellSession
-$ cat > include/print.hpp <<EOF
+$ cat > include/print.hpp <<EOF   
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -79,7 +79,7 @@ EOF
 ```
 
 ```ShellSession
-$ cat > examples/example1.cpp <<EOF
+$ cat > examples/example1.cpp <<EOF    # выводит последовательно указанные файлы
 #include <print.hpp>
 
 int main(int argc, char** argv) {
@@ -89,7 +89,7 @@ EOF
 ```
 
 ```ShellSession
-$ cat > examples/example2.cpp <<EOF
+$ cat > examples/example2.cpp <<EOF    # выводит последовательно указанные файлы
 #include <fstream>
 #include <print.hpp>
 
@@ -101,26 +101,26 @@ EOF
 ```
 
 ```ShellSession
-$ edit README.md
+$ edit README.md    # редактируем README.md
 ```
 
 ```ShellSession
-$ git status
-$ git add .
-$ git commit -m"added sources"
-$ git push origin master
+$ git status    # показывает статус рабочего дерева
+$ git add .     # добавляем все файлы и папки текущей директории в index
+$ git commit -m"added sources"  # фиксирует изменения, добавленные в staging area
+$ git push origin master  #  вталкивает данные текущей ветви в ветвь master удалённого репозитория origin
 ```
 
 ## Report
 
 ```ShellSession
-$ cd ~/workspace/labs/
-$ export LAB_NUMBER=03
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
-$ mkdir reports/lab${LAB_NUMBER}
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
-$ cd reports/lab${LAB_NUMBER}
-$ edit REPORT.md
+$ cd ~/workspace/labs/  # переходим по заданному пути
+$ export LAB_NUMBER=03  # включаем в дочерние процессы
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}  # клонируем репозиторий
+$ mkdir reports/lab${LAB_NUMBER}    #создаем новый каталог
+$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md  # копируем файлы в другие каталоги
+$ cd reports/lab${LAB_NUMBER} # переходим по заданному пути
+$ edit REPORT.md    # редактируем README.md
 $ gistup -m "lab${LAB_NUMBER}"
 ```
 
