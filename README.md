@@ -54,6 +54,11 @@ $ git log     # история фиксаций
 $ mkdir sources   #создаем новый каталог
 $ mkdir include   #создаем новый каталог
 $ mkdir examples  #создаем новый каталог
+```
+
+Создаем и записываем новый файл printf.cpp в папке sources
+
+```
 $ cat > sources/print.cpp <<EOF   # выводит последовательно указанные файлы
 #include <print.hpp>
 
@@ -67,6 +72,10 @@ void print(const std::string& text, std::ofstream& out) {
 EOF
 ```
 
+
+Создаем и записываем новый файл printf.hpp в папке include
+
+
 ```ShellSession
 $ cat > include/print.hpp <<EOF   
 #include <string>
@@ -78,6 +87,8 @@ void print(const std::string& text, std::ofstream& out);
 EOF
 ```
 
+Создаем и записываем новый файл example1.cpp в папке examples
+
 ```ShellSession
 $ cat > examples/example1.cpp <<EOF    # выводит последовательно указанные файлы
 #include <print.hpp>
@@ -87,6 +98,9 @@ int main(int argc, char** argv) {
 }
 EOF
 ```
+
+
+Создаем и записываем новый файл example2.cpp в папке examples
 
 ```ShellSession
 $ cat > examples/example2.cpp <<EOF    # выводит последовательно указанные файлы
