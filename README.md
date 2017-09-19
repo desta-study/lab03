@@ -114,13 +114,13 @@ $ git push origin master  #  вталкивает данные текущей в
 ## Report
 
 ```ShellSession
-$ cd ~/workspace/labs/  # переходим по заданному пути
-$ export LAB_NUMBER=03  # включаем в дочерние процессы
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}  # клонируем репозиторий
-$ mkdir reports/lab${LAB_NUMBER}    #создаем новый каталог
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md  # копируем файлы в другие каталоги
-$ cd reports/lab${LAB_NUMBER} # переходим по заданному пути
-$ edit REPORT.md    # редактируем README.md
+$ cd ~/workspace/labs/  
+$ export LAB_NUMBER=03  
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}  
+$ mkdir reports/lab${LAB_NUMBER}    
+$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md  
+$ cd reports/lab${LAB_NUMBER} 
+$ edit REPORT.md    
 $ gistup -m "lab${LAB_NUMBER}"
 ```
 
